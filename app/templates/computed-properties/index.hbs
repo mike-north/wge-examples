@@ -1,4 +1,18 @@
 <div class="row">
+  <div class="col s12  thin-inputs">
+    {{#md-card-collapsible accordion=false}}
+      {{#md-collapsible icon="mdi-action-settings" title="Configuration"}}
+        <div class="row">
+          <div class="col s4">{{md-input label="Tax (%)" value=taxPercent}}</div>
+          <div class="col s4">{{md-input label="Tip (%)" value=tipPercent}}</div>
+          <div class="col s4">{{md-input label="Discount ($)" value=discount}}</div>
+        </div>
+      {{/md-collapsible}}
+    {{/md-card-collapsible}}
+  </div>
+</div>
+
+<div class="row">
   <div class="col m8">
     {{#md-card title="Menu"}}
       {{#md-card-content}}
@@ -19,6 +33,7 @@
   <div class="col m4">
     {{#md-card title="Order"}}
       {{#md-card-content}}
+        <table>
         {{#each order as |orderItem|}}
           <tr>
             <td width=100>
@@ -27,7 +42,9 @@
             <td>{{orderItem.name}}</td>
             <td width=150 class="text-right">{{nice-currency orderItem.price}}</td>
           </tr>
-          {{/each}}
+        {{/each}}
+        </table>
+        <hr>
       {{/md-card-content}}
     {{/md-card}}
   </div>

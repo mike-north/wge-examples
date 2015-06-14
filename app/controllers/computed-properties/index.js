@@ -6,6 +6,10 @@ export default Ember.Controller.extend({
   order: [],
   queryParams: ['order'],
 
+  taxPercent: 6,   // in percent (i.e., 6 ==> 6%)
+  tipPercent: 17,  // in percent
+  discount: 5, //dollars
+
   actions: {
     addMenuItem(menuItem) {
       let order = this.get('order');
