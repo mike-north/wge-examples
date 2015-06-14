@@ -1,3 +1,19 @@
-<h2 id="title">Welcome to Ember.js</h2>
-
+{{#nav-bar}}
+  {{#link-to 'computed-properties.index' tagName='li'}}
+    <a>Computed Properties</a>
+  {{/link-to}}
+  {{#link-to 'components.index' tagName='li'}}
+    <a>Components</a>
+  {{/link-to}}
+  {{#link-to 'design-patterns.index' tagName='li'}}
+    <a>Design Patterns</a>
+  {{/link-to}}
+  {{#link-to 'testing.index' tagName='li'}}
+    <a>Testing</a>
+  {{/link-to}}
+{{/nav-bar}}
+<main>
 {{outlet}}
+</main>
+{{!-- ember-cli-materialize modal container --}}
+{{md-modal-container}}

@@ -1,11 +1,15 @@
 import Ember from 'ember';
 import config from './config/environment';
 
-var Router = Ember.Router.extend({
+let Router = Ember.Router.extend({
   location: config.locationType
 });
 
 Router.map(function() {
+  this.route('computed-properties', function() {});
+  this.route('components', function() {});
+  this.route('design-patterns', function() {});
+  this.route('testing', function() {});
 });
 
 export default Router;
