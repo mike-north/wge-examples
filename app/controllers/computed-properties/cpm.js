@@ -12,12 +12,8 @@ export default Ember.Controller.extend({
   tipPercent: 17,  // in percent
   discount: 5, //dollars
 
-  subtotal: computed('order.[]', {
-    get() {
-      let prices = this.get('order').mapBy('price') || [];
-      return prices.reduce((acc, val) => acc + val, 0);
-    }
-  }),
+  orderPrices: computed.mapBy('order', 'price'),
+  subtotal: computed.sum('orderPrices'),
 
   tipAmount: computed('subtotal', 'tipPercent', {
     get() {

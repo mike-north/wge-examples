@@ -51,3 +51,10 @@ header, main, footer {
     display: none;
   }
 }
+
+table tfoot {
+  border-top: 1px grey solid;
+  td {
+    font-weight: bold;
+  }
+}
