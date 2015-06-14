@@ -6,6 +6,6 @@ moduleFor('route:computed-properties/cpm', 'Unit | Route | computed properties/c
 });
 
 test('it exists', function(assert) {
-  var route = this.subject();
+  let route = this.subject();
   assert.ok(route);
 });

@@ -5,6 +5,6 @@ module('Unit | Utility | inject object');
 
 // Replace this with your real tests.
 test('it works', function(assert) {
-  var result = injectObject();
+  let result = injectObject();
   assert.ok(result);
 });

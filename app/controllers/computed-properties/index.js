@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
 
   taxPercent: 6,   // in percent (i.e., 6 ==> 6%)
   tipPercent: 17,  // in percent
-  discount: 5, //dollars
+  discount: 5, // dollars
 
   subtotal: computed('order.[]', {
     get() {

@@ -1,11 +1,9 @@
 import Ember from 'ember';
 import MENU_ITEMS from '../../fixtures/restaurant-menu';
 
-import sum from 'ember-cpm/macros/sum'
-import sumBy from 'ember-cpm/macros/sum-by'
-import product from 'ember-cpm/macros/product'
-
-const { computed } = Ember;
+import sum from 'ember-cpm/macros/sum';
+import sumBy from 'ember-cpm/macros/sum-by';
+import product from 'ember-cpm/macros/product';
 
 export default Ember.Controller.extend({
   menuItems: MENU_ITEMS,
@@ -14,7 +12,7 @@ export default Ember.Controller.extend({
 
   taxPercent: 6,   // in percent (i.e., 6 ==> 6%)
   tipPercent: 17,  // in percent
-  discount: 5, //dollars
+  discount: 5, // dollars
 
   subtotal: sumBy('order', 'price'),
 
