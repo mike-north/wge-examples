@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col m8">
+    {{#md-card title="Menu"}}
+      {{#md-card-content}}
+        <table>
+          {{#each menuItems as |menuItem|}}
+          <tr>
+            <td width=100>
+              <button class="btn btn-flat" {{action 'addMenuItem' menuItem}}>Add</button>
+            </td>
+            <td>{{menuItem.name}}</td>
+            <td width=150 class="text-right">{{nice-currency menuItem.unitPrice}}</td>
+          </tr>
+          {{/each}}
+        </table>
+      {{/md-card-content}}
+    {{/md-card}}
+  </div>
+  <div class="col m4">
+    {{#md-card title="Order"}}
+      {{#md-card-content}}
+        {{#each order as |orderItem|}}
+          <tr>
+            <td width=100>
+              <button class="btn btn-flat" {{action 'removeOrderItem' orderItem}}>&times;</button>
+            </td>
+            <td>{{orderItem.name}}</td>
+            <td width=150 class="text-right">{{nice-currency orderItem.price}}</td>
+          </tr>
+          {{/each}}
+      {{/md-card-content}}
+    {{/md-card}}
+  </div>
+</div>

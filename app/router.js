@@ -6,7 +6,10 @@ let Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('computed-properties', function() {});
+  this.route('computed-properties', function() {
+    this.route('cpm');
+    this.route('composable-cpm');
+  });
   this.route('components', function() {});
   this.route('design-patterns', function() {});
   this.route('testing', function() {});

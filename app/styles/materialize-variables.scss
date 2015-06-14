@@ -6,6 +6,8 @@
 @import "components/color";
 
 $primary-color: color("deep-purple", "base");
+$my-background: #f3f3f3;
+$tabs-bg-color: $my-background;
 
 // Variables;
 @import "components/variables";

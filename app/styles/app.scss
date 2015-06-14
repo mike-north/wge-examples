@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #f3f3f3;
+  background-color: $my-background;
 }
 
 header, main, footer {
@@ -39,4 +39,9 @@ header, main, footer {
       margin-top: 70px;
     }
   }
+}
+
+
+.text-right {
+  text-align: right;
 }
