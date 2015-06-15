@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('components', function() {});
   this.route('design-patterns', function() {});
   this.route('testing', function() {});
+  this.route('component');
 });
 
 export default Router;
