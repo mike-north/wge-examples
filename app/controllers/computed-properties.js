@@ -21,12 +21,10 @@ export default Ember.Controller.extend({
     route: 'computed-properties.composable-cpm'
   }],
 
-  selectedTabId: computed({
+  _selectedTabId: 'base',
+  selectedTabId: computed('_selectedTabId', {
     get() {
-      let anchor = document.createElement('a');
-      anchor.href = this.get('router.url');
-
-      return this.get('choices').findBy('url', anchor.pathname).id;
+      return this.get('_selectedTabId');
     },
     set(key, newVal) {
       this.transitionTo(this.get('choices').findBy('id', newVal).route);

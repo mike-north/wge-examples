@@ -1,12 +1,10 @@
 import Ember from 'ember';
-import MENU_ITEMS from '../../fixtures/restaurant-menu';
 
 import sum from 'ember-cpm/macros/sum';
 import sumBy from 'ember-cpm/macros/sum-by';
 import product from 'ember-cpm/macros/product';
 
 export default Ember.Controller.extend({
-  menuItems: MENU_ITEMS,
   order: [],
   queryParams: ['order'],
 
@@ -31,8 +29,8 @@ export default Ember.Controller.extend({
       let order = this.get('order');
       order.addObject({
         id: (new Date()).valueOf(),
-        name: menuItem.name,
-        price: menuItem.unitPrice
+        name: menuItem.get('name'),
+        price: menuItem.get('price')
       });
     },
     removeOrderItem(orderItem) {
