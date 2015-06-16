@@ -29,7 +29,7 @@ export default Ember.Controller.extend({
     }
   }),
 
-  totalAmount: computed('subtotal', 'taxAmount', 'tipAmount', 'discountAmount', {
+  totalAmount: computed('subtotal', 'taxAmount', 'tipAmount', 'discount', {
     get() {
       return this.get('subtotal') +
         this.get('taxAmount') +

@@ -3,8 +3,9 @@
   {{yield}}
 </div>
 
-{{#if hasActions}}
+{{#if _cardActions.length}}
   <div class="card-action">
+    {{debugger}}
     {{#each _cardActions as |cardAction|}}
       {{view Ember.View
         tagName='a'

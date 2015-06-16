@@ -7,15 +7,15 @@ module.exports = function(app) {
       'menu-items': [{
         id: 1,
         name: 'Hamburger',
-        price: 1.3
+        price: 6.3
       }, {
         id: 2,
         name: 'Fries',
-        price: 2.4
+        price: 3.4
       }, {
         id: 3,
         name: 'Hot Dog',
-        price: 1.2
+        price: 2.2
       }]
     });
   });
