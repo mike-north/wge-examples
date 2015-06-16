@@ -5461,7 +5461,7 @@ catch(err) {
 if (runningTests) {
   require("wge-examples/tests/test-helper");
 } else {
-  require("wge-examples/app")["default"].create({"name":"wge-examples","version":"0.0.0.1db1b5c8"});
+  require("wge-examples/app")["default"].create({"name":"wge-examples","version":"0.0.0.e419a5e8"});
 }
 
 /* jshint ignore:end */
