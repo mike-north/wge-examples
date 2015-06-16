@@ -6,6 +6,6 @@ moduleFor('route:testing/pageobject', 'Unit | Route | testing/pageobject', {
 });
 
 test('it exists', function(assert) {
-  var route = this.subject();
+  let route = this.subject();
   assert.ok(route);
 });

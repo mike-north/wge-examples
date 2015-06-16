@@ -5,12 +5,10 @@ export default Ember.Route.extend({
   model() {
     return this.store.find('menu-item');
   },
-  afterModel() {
-    this._super(...arguments);
-    this.controllerFor('computed-properties').set('_selectedTabId', 'cpm');
-  },
 
   setupController(controller) {
+    this._super(...arguments);
+    this.controllerFor('computed-properties').set('_selectedTabId', 'cpm');
     controller.set('codeExample', 'cp-cpm-example.js');
   }
 });
