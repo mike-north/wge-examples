@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 const { computed } = Ember;
 
+// BEGIN-SNIPPET cp-cpm-example
 export default Ember.Controller.extend({
   order: [],
   queryParams: ['order'],
@@ -48,3 +49,4 @@ export default Ember.Controller.extend({
     }
   }
 });
+// END-SNIPPET

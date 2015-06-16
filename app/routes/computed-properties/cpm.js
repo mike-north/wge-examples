@@ -8,5 +8,9 @@ export default Ember.Route.extend({
   afterModel() {
     this._super(...arguments);
     this.controllerFor('computed-properties').set('_selectedTabId', 'cpm');
+  },
+
+  setupController(controller) {
+    controller.set('codeExample', 'cp-cpm-example.js');
   }
 });

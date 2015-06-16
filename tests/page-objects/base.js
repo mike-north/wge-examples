@@ -1,3 +1,4 @@
+// BEGIN-SNIPPET po-basic-example
 class Base {
   constructor(assert) {
     this.assert = assert;
@@ -37,3 +38,4 @@ class Base {
 }
 
 export default Base;
+// END-SNIPPET

@@ -19,9 +19,7 @@ module('Acceptance | computed properties', {
   }
 });
 
-const pages = ['/computed-properties', '/computed-properties/cpm', '/computed-properties/composable-cpm'];
-
-// pages.for
+// BEGIN-SNIPPET rm-test-example
 
 test('visiting /computed-properties', function(assert) {
 
@@ -57,3 +55,4 @@ test('visiting /computed-properties', function(assert) {
       .assertTotal('$ 20.11');
 
 });
+// END-SNIPPET

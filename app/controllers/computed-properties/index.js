@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 const { computed } = Ember;
-
+// BEGIN-SNIPPET cp-basic-example
 export default Ember.Controller.extend({
   order: [],
   queryParams: ['order'],
@@ -52,3 +52,4 @@ export default Ember.Controller.extend({
     }
   }
 });
+// END-SNIPPET

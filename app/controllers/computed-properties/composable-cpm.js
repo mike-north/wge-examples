@@ -1,3 +1,4 @@
+// BEGIN-SNIPPET cp-composable-cpm-example
 import Ember from 'ember';
 
 import sum from 'ember-cpm/macros/sum';
@@ -38,3 +39,4 @@ export default Ember.Controller.extend({
     }
   }
 });
+// END-SNIPPET

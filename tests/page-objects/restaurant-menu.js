@@ -1,3 +1,5 @@
+// BEGIN-SNIPPET po-rm-example
+
 import Base from './base';
 
 class RestaurantMenu extends Base {
@@ -99,3 +101,4 @@ class RestaurantMenu extends Base {
 }
 
 export default RestaurantMenu;
+// END-SNIPPET
