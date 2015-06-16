@@ -32,6 +32,9 @@ header, main, footer {
   }
   .brand-logo {
     padding-left: 20px;
+    max-width: 80%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
   }
   .side-nav {
