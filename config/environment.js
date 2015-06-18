@@ -39,10 +39,10 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
-  if (environment === 'prodution') {
+  // if (environment === 'prodution') {
     ENV.baseURL = '/wge-examples';
     ENV.locationType = 'hash';
-  }
+  // }
 
   return ENV;
 };
