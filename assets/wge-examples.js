@@ -1519,6 +1519,13 @@ define('wge-examples/routes/design-patterns/index', ['exports', 'ember'], functi
 	exports['default'] = Ember['default'].Route.extend({});
 
 });
+define('wge-examples/routes/index', ['exports', 'ember'], function (exports, Ember) {
+
+	'use strict';
+
+	exports['default'] = Ember['default'].Route.extend({});
+
+});
 define('wge-examples/routes/testing', ['exports', 'ember'], function (exports, Ember) {
 
 	'use strict';
@@ -3447,6 +3454,90 @@ define('wge-examples/templates/design-patterns/index', ['exports'], function (ex
   }()));
 
 });
+define('wge-examples/templates/index', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    return {
+      isHTMLBars: true,
+      revision: "Ember@1.12.0",
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"class","container");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2,"class","row");
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("div");
+        dom.setAttribute(el3,"class","col s12 text-center");
+        var el4 = dom.createTextNode("\n        ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("iframe");
+        dom.setAttribute(el4,"src","http://www.slideshare.net/mikelnorth/slideshelf");
+        dom.setAttribute(el4,"width","490px");
+        dom.setAttribute(el4,"height","470px");
+        dom.setAttribute(el4,"frameborder","0");
+        dom.setAttribute(el4,"marginwidth","0");
+        dom.setAttribute(el4,"marginheight","0");
+        dom.setAttribute(el4,"scrolling","no");
+        dom.setAttribute(el4,"style","border:none;");
+        dom.setAttribute(el4,"allowfullscreen","");
+        dom.setAttribute(el4,"webkitallowfullscreen","");
+        dom.setAttribute(el4,"mozallowfullscreen","");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n    ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, content = hooks.content;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
+        content(env, morph0, context, "outlet");
+        return fragment;
+      }
+    };
+  }()));
+
+});
 define('wge-examples/templates/testing', ['exports'], function (exports) {
 
   'use strict';
@@ -4633,6 +4724,26 @@ define('wge-examples/tests/routes/design-patterns/index.jshint', function () {
   });
 
 });
+define('wge-examples/tests/routes/index.jscs-test', function () {
+
+  'use strict';
+
+  module('JSCS - routes');
+  test('routes/index.js should pass jscs', function() {
+    ok(true, 'routes/index.js should pass jscs.');
+  });
+
+});
+define('wge-examples/tests/routes/index.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - routes');
+  test('routes/index.js should pass jshint', function() { 
+    ok(true, 'routes/index.js should pass jshint.'); 
+  });
+
+});
 define('wge-examples/tests/routes/testing.jscs-test', function () {
 
   'use strict';
@@ -5215,6 +5326,41 @@ define('wge-examples/tests/unit/routes/design-patterns/index-test.jshint', funct
   });
 
 });
+define('wge-examples/tests/unit/routes/index-test', ['ember-qunit'], function (ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleFor('route:index', 'Unit | Route | index', {});
+
+  ember_qunit.test('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+
+  // Specify the other units that are required for this test.
+  // needs: ['controller:foo']
+
+});
+define('wge-examples/tests/unit/routes/index-test.jscs-test', function () {
+
+  'use strict';
+
+  module('JSCS - unit/routes');
+  test('unit/routes/index-test.js should pass jscs', function() {
+    ok(false, 'unit/routes/index-test.js should pass jscs.\nVariable declarations should use `let` or `const` not `var` at unit/routes/index-test.js :\n     7 |\n     8 |test(\'it exists\', function(assert) {\n     9 |  var route = this.subject();\n----------^\n    10 |  assert.ok(route);\n    11 |});');
+  });
+
+});
+define('wge-examples/tests/unit/routes/index-test.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - unit/routes');
+  test('unit/routes/index-test.js should pass jshint', function() { 
+    ok(true, 'unit/routes/index-test.js should pass jshint.'); 
+  });
+
+});
 define('wge-examples/tests/unit/routes/testing-test', ['ember-qunit'], function (ember_qunit) {
 
   'use strict';
@@ -5461,7 +5607,7 @@ catch(err) {
 if (runningTests) {
   require("wge-examples/tests/test-helper");
 } else {
-  require("wge-examples/app")["default"].create({"name":"wge-examples","version":"0.0.0.e419a5e8"});
+  require("wge-examples/app")["default"].create({"name":"wge-examples","version":"0.0.0.15856947"});
 }
 
 /* jshint ignore:end */
